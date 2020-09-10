@@ -113,6 +113,7 @@ class Game_Relationship(models.Model):
     objecter_id = models.IntegerField(verbose_name='对方id')
     objecter_name = models.CharField(max_length=64)
     relation_code = models.IntegerField(verbose_name='0-陌生人 11-恋人  12-夫妻   21-父  22-母 31-子 32-女 41-兄 42-弟 43-姐 44-妹  51-同学  61-同事  71-聚会  81-酒吧 91-旅游' )
+    relation_attitude = models.IntegerField(verbose_name='关系值', default=0)
     game_id =models.IntegerField(verbose_name='游戏局id')
     round_id = models.IntegerField(verbose_name='回合id')
     created = models.DateTimeField(auto_now_add=True)
